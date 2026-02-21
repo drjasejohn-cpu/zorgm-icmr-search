@@ -6,81 +6,25 @@
   <title>Zorgm ICMR Guidelines Search</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 16px;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .header h1 {
-      font-size: 26px;
-      color: #1a2f4e;
-      font-weight: 700;
-    }
-
-    .header p {
-      color: #5a7184;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #dbeafe;
-      color: #1d4ed8;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-top: 10px;
-    }
-
-    .widget-container {
-      width: 100%;
-      max-width: 780px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      padding: 24px;
-      min-height: 500px;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #a0aec0;
-      text-align: center;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 16px; }
+    .header { text-align: center; margin-bottom: 32px; }
+    .header h1 { font-size: 26px; color: #1a2f4e; font-weight: 700; }
+    .header p { color: #5a7184; font-size: 14px; margin-top: 8px; }
+    .badge { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-top: 10px; }
+    footer { margin-top: 40px; font-size: 12px; color: #a0aec0; text-align: center; }
   </style>
 </head>
 <body>
-
   <div class="header">
     <h1>Zorgm ICMR Guidelines Search</h1>
     <p>Search across ICMR clinical guidelines powered by Vertex AI</p>
     <div class="badge">Clinical Research Preview</div>
   </div>
-
-  <div class="widget-container">
-    <gen-search-widget
-      configId="4e4975ca-cbbd-432a-922e-2c05df878f76"
-      triggerId="searchWidgetTrigger">
-    </gen-search-widget>
-  </div>
-
+  <button id="searchWidgetTrigger" style="display:flex;align-items:center;gap:12px;background:white;border:1.5px solid #d0dce8;border-radius:12px;padding:14px 20px;width:100%;max-width:720px;cursor:pointer;font-size:15px;color:#5a7184;box-shadow:0 2px 12px rgba(0,0,0,0.07);margin-bottom:16px;">
+    🔍 &nbsp; Search ICMR guidelines...
+  </button>
+  <gen-search-widget configId="4e4975ca-cbbd-432a-922e-2c05df878f76" triggerId="searchWidgetTrigger"></gen-search-widget>
   <footer>Powered by Zorgm Pro &amp; Google Vertex AI · ICMR Guidelines v1.0</footer>
-
   <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
-
 </body>
 </html>
